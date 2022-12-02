@@ -37,5 +37,6 @@
 *.app
 main
 day01-calorie-counting
+day02-rock-paper-scissors
 
 # End of https://www.toptal.com/developers/gitignore/api/c++
