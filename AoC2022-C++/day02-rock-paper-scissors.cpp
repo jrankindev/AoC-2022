@@ -41,24 +41,25 @@ int puzzlePart2(std::vector<std::string> puzzleVector) {
 
     // loop through each round and add to score
     for (std::string round : puzzleVector) {
-        // take the ascii value for the choice characters
-        // subtract base ascii value to get choices on same 1-3 scale
+        // take the ascii value for the choice/needed outcome characters
+        // subtract base ascii value to get choices on 1-3 or 0-2 scale
         int oppChoiceVal = round.at(0) - 64;
-        int myChoiceVal = round.at(2) - 87;
+        int neededOutcome = round.at(2) - 88;
 
-        // calculate delta of round
-        int outcome = (3 + myChoiceVal - oppChoiceVal) % 3;
-
-        // 0 is draw, 1 is win, 2 is loss
-        switch (outcome) {
+        // 0 is lose, 1 is draw, 2 is win
+        switch (neededOutcome) {
             case 0:
-                score += myChoiceVal + 3;
+                if (oppChoiceVal == 1) {
+                    score += 3;
+                } else {
+                    score += (oppChoiceVal + 2) % 3;
+                }
                 break;
             case 1:
-                score += myChoiceVal + 6;
+                score += oppChoiceVal + 3;
                 break;
             case 2:
-                score += myChoiceVal;
+                score += (oppChoiceVal % 3) + (neededOutcome * 3) + 1;
                 break;
         }
     }
