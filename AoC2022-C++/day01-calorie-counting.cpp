@@ -44,7 +44,7 @@ int main() {
     // load puzzle input
     std::vector<std::string> puzzleVector = helper::loadPuzzleInputStringVec("inputs/day01/pi.txt");
 
-    // solve part 1
+    // solve part 1 & 2
     std::vector<int> answer = puzzlePart1and2(puzzleVector);
 
     // print question and answer
