@@ -72,15 +72,14 @@ def main():
     # get puzzle input
     puzzle_input = helper.load_puzzle_input("inputs/day02/pi.txt")
 
-    # solve part 1 & 2 and print QA
+    # solve part 1 and print QA
     answer = puzzle_part_1(puzzle_input)
     helper.print_question_answer(
         "What would your total score be if everything goes exactly according to your strategy guide? ", answer,
     )
 
+    # solve part 2 and print QA
     answer = puzzle_part_2(puzzle_input)
-
-    # part 2print QA
     helper.print_question_answer(
         "Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide? ",
         answer,
