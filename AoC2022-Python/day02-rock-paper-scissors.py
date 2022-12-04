@@ -1,4 +1,4 @@
-### ADVENT OF CODE 2022 DAY 1 CALORIE COUNTING ###
+### ADVENT OF CODE 2022 DAY 2 ROCK PAPER SCISSORS ###
 
 
 import helper.helper as helper
