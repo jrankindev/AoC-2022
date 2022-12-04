@@ -75,7 +75,7 @@ def main():
     # solve part 2 & print QA
     answer = puzzle_part_2(puzzle_input)
     helper.print_question_answer(
-        "Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide? ",
+        "Find the item type that corresponds to the badges of each three-Elf group. What is the sum of the priorities of those item types? ",
         answer,
     )
 
